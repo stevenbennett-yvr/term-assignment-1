@@ -7,65 +7,78 @@
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .2fr 1.5fr 1.2fr .8fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "nav nav nav nav"
-    "sidebar main main main"
-    "sidebar content1 content2 content3"
-    "sidebar footer footer footer";
+    "nav main main main"
+    "nav main main main"
+    "nav main main main"
+    "nav main main main";
     grid-gap: 0.2rem;
     font-family:"Inter", sans-senif;
     font-weight:800;
     text-transform: uppercase;
     color:#191724;
-    text-align: left;
+    text-align: center;
+    font-size:1.5em;
 }
 
 nav{
-    background: #eb6f92;
+    background: #c4a7e7;
     grid-area: nav;
     border-radius:var(--main-radius);
     padding-top:var(--main-padding);
 }
 
+a{
+  text-decoration: none;
+  color: #191724;
+}
+
 main{
-    background: #f6c177;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    background: #e0def4;
     grid-area: main;
     border-radius:var(--main-radius);
     padding-top:var(--main-padding);
 }
 
-#sidebar{
-    background: #ebbcba;
-    grid-area: sidebar;
-    border-radius:var(--main-radius);
-    padding-top:var(--main-padding);
-}
 
-#content1{
+.card {
     background: #9ccfd8;
-    grid-area: content1;
+    flex: 1;
+    font-size: .8em;
+    flex-basis: auto;
     border-radius:var(--main-radius);
     padding-top:var(--main-padding);
+    margin: 1em;
 }
 
-#content2{
-    background: #9ccfd8;
-    grid-area: content2;
-    border-radius:var(--main-radius);
-    padding-top:var(--main-padding);
+form{
+    font-size: .5em;
 }
 
-#content3{
-    background: #9ccfd8;
-    grid-area: content3;
-    border-radius:var(--main-radius);
-    padding-top:var(--main-padding);
+@media only screen and (max-width: 550px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.4fr 1fr;
+      grid-template-areas:
+        "nav"
+        "main";
+      font-size: 1em;
+    }
+    main{
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 }
-
-footer{
-    background: #c4a7e7;
-    grid-area: footer;
-    border-radius:var(--main-radius);
-    padding-top:var(--main-padding);
-}
+    .card{
+        flex-grow: 1;
+        width: 80vw;
+    }
+  }
