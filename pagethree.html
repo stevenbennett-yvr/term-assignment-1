@@ -7,6 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Info</title>
+    <style> #submit{
+        background-color: #56949f;
+          } 
+             #cancle{
+        background-color: #eb6f92;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,10 +23,15 @@
         </nav>
         <main>
             <form action="/action_page.php">
-                <label for="fname">Contact Name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
-                
-              </form>
+                <input type="text" id="fname" placeholder="Contact Name" name="fname"><br><br>
+                <input type="text" id="fname" placeholder="Contact Phone" name="fname"><br><br>
+                <input type="text" id="fname" placeholder="Contact Address" name="fname"><br><br>
+                <input type="text" id="fname" placeholder="Contact Email" name="fname"><br><br>
+                <div class="buttons">
+                    <button id='submit' type="submit" form="form1" value="Submit" class="block">Submit</button>
+                    <button id='cancle' type="cancle" form="form1" value="Submit" class="block">Cancle</button>
+                </div>
+            </form>
         </main>
     </div>
     <!---

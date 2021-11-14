@@ -46,6 +46,13 @@ main{
     padding-top:var(--main-padding);
 }
 
+dl{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+      font-size: 75%;
+  }
+
 
 .card {
     background: #9ccfd8;
@@ -58,7 +65,26 @@ main{
 }
 
 form{
+    display:flex;
     font-size: .5em;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.buttons{
+    display:flex;
+    flex-direction: row;    
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  margin: 2px;
 }
 
 @media only screen and (max-width: 550px) {
