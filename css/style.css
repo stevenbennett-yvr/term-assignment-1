@@ -71,6 +71,12 @@ form{
     align-items: stretch;
 }
 
+.forum_button{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 .buttons{
     display:flex;
     flex-direction: row;    

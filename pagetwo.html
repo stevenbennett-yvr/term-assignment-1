@@ -6,7 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Contact</title>
+    <title>Contact Info</title>
+    <style> #submit{
+        background-color: #56949f;
+          } 
+             #cancle{
+        background-color: #eb6f92;
+        }
+    </style>
 </head>
 <body>
 
@@ -15,26 +22,36 @@
             <a href="/pagetwo.html">Create New Contact</a>
         </nav>
         <main>
-            <div class="display">
-                <dl>Benjamin Sisko
-                <dt>Email: benjamin.sisco@startrek.com</dt>
-                <dt>Phone: 504-899-8221</dt>
-                <dt>address: 1403 Washington Ave,</dt>
-                <dt>New Orleans,LA</dt>
-                </dl>
-                </dl>
-                    <div class="buttons">
-                        <button id='submit' type="Edit" form="form1" value="Submit" class="block">Edit</button>
-                        <button id='cancle' type="Close" form="form1" value="Submit" class="block">Close</button>
-                    </div>
-            </div>
-            </main>
+            <form action="/action_page.php">
+                <input type="text" id="fname" placeholder="Contact Name" name="fname">
+                <br><br>
+                <div class='form_button'>
+                    <input type="text" id="fname" placeholder="Contact Phone" name="fname">
+                    <button>x</button>
+                    <br><br>
+                </div>
+                <div class='form_button'>
+                    <input type="text" id="fname" placeholder="Contact Address" name="fname">
+                    <button>x</button>
+                    <br><br>
+                </div>
+                <div class='form_button'>
+                    <input type="text" id="fname" placeholder="Contact Email" name="fname">
+                    <button>x</button>
+                    <br><br>
+                </div>
+                <div class="buttons">
+                    <button id='submit' type="submit" form="form1" value="Submit" class="block">Submit</button>
+                    <button id='cancle' type="cancle" form="form1" value="Submit" class="block">Cancle</button>
+                </div>
+            </form>
+        </main>
     </div>
     <!---
-    create new contacts. has a side nav. has a placeholder image (contact image must be a circle)
-    has input fields, and buttons beside three of the fields. Has a button to save or cancle
+    page to display existing contact, with edit and close buttons.
+    has a side nav.
+    has a placeholder image and contact information (image must be a circle)
+    has edit and close buttons.
     -->
-
-
 </body>
 </html>
